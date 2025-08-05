@@ -1,1 +1,29 @@
+'''
+INTEGER TEST
 
+By deafult, all input is a string, so it must be convercted to an integer
+The following input variations (or Typos) should be tested:
+-> String
+-> Float
+'''
+
+
+def intProtection(type_here_your_variable):
+
+  x = type_here_your_variable
+
+  #String testing
+  try:
+    float(x)
+  except:  
+    print("Typo!")
+    errorInt = True
+
+  #Float testing
+  if type(x) == float:
+    print("Typo!")
+    errorInt = True
+
+  return errorInt
+
+intProtection(type_here_your_variable)
